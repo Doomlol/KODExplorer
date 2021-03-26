@@ -1,10 +1,5 @@
 <?php
-/*
-* @link http://kodcloud.com/
-* @author warlee | e-mail:kodcloud@qq.com
-* @copyright warlee 2014.(Shanghai)Co.,Ltd
-* @license http://kodcloud.com/tools/license/license.txt
-*/
+
 
 define('GLOBAL_DEBUG',0);//0 or 1
 define('GLOBAL_DEBUG_HOOK',0);//0 or 1
@@ -88,7 +83,7 @@ if (strtoupper(substr(PHP_OS, 0,3)) === 'WIN') {
 	$config['systemCharset']='utf-8';
 }
 
-// 部分反向代理导致获取不到url的问题优化;忽略同域名http和https的情况
+
 if(isset($_COOKIE['APP_HOST'])){
 	if( get_url_domain($_COOKIE['HOST']) != get_url_domain($_COOKIE['APP_HOST']) ||
 	    get_url_scheme($_COOKIE['HOST']) == get_url_scheme($_COOKIE['APP_HOST']) ){
